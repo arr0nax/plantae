@@ -9,6 +9,8 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { PlantListComponent } from './plant-list/plant-list.component';
 import { PlantDetailComponent } from './plant-detail/plant-detail.component';
+import { AboutComponent } from './about/about.component';
+import { TypePipe } from './type.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +23,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     PlantListComponent,
-    PlantDetailComponent
+    PlantDetailComponent,
+    AboutComponent,
+    TypePipe
   ],
   imports: [
     BrowserModule,

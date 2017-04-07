@@ -1,7 +1,12 @@
 <p>
   plant-list works!
 </p>
-<div class="plants" *ngFor="let plant of plants | async" (click)='goToPlant(plant)'>
+<select class="" (change)="onTypeChange($event.target.value)">
+  <option value="all">All Plants</option>
+  <option value="cactus">All Cactuses</option>
+  <option value="succulent">All Succulents</option>
+  <option value="moss">All Mosses</option>
+</select>
+<div class="plants" *ngFor="let plant of plants | async | type:filterByType" (click)='goToPlant(plant)'>
   <h2>{{plant.name}}</h2>
-  <h2>{{plant.$key}}</h2>
 </div>

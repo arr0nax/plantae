@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class PlantListComponent implements OnInit {
   plants: FirebaseListObservable<any[]>;
+  filterByType: string = 'all';
 
   constructor(private plantService: PlantService, private router: Router) { }
 
@@ -22,6 +23,10 @@ export class PlantListComponent implements OnInit {
   goToPlant(plant) {
     console.log(plant.$key)
     this.router.navigate(['plant', plant.$key])
+  }
+
+  onTypeChange(type) {
+    this.filterByType = type;
   }
 
 }

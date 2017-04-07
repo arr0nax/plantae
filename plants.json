@@ -1,17 +1,20 @@
 { "plants": [{
     "name": "shaggy",
+    "type": "succulent",
     "description": "a succulent that got caught on the counter",
     "care": "don't water it - doesn't deserve it",
     "location": "counter",
     "img": "http://thumbs3.ebaystatic.com/d/l225/m/mw-nmaPLzcAemRjbRvqGijw.jpg"
   }, {
     "name": "abe",
+    "type": "cactus",
     "description": "christmas cactus - it flowers once a year when its not in a fucking house",
     "care": "idk desert stuff",
     "location": "windowsill",
     "img": "https://s-media-cache-ak0.pinimg.com/564x/28/52/53/285253ee2ec69cec0ebe8ad14a530574.jpg"
   }, {
     "name": "harry",
+    "type": "moss",
     "description": "moss ball",
     "care": "i dont",
     "location": "deep deep down",
