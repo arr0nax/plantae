@@ -15,4 +15,8 @@ export class PlantService {
     return this.plants;
   }
 
+  getPlantById(plantId: string) {
+    return this.af.database.object('plants/'+plantId);
+  }
+
 }

@@ -1,6 +1,7 @@
 <p>
   plant-list works!
 </p>
-<div class="plants" *ngFor="let plant of plants | async">
+<div class="plants" *ngFor="let plant of plants | async" (click)='goToPlant(plant)'>
   <h2>{{plant.name}}</h2>
+  <h2>{{plant.$key}}</h2>
 </div>

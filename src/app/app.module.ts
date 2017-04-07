@@ -8,6 +8,7 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { PlantListComponent } from './plant-list/plant-list.component';
+import { PlantDetailComponent } from './plant-detail/plant-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -19,7 +20,8 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    PlantListComponent
+    PlantListComponent,
+    PlantDetailComponent
   ],
   imports: [
     BrowserModule,
