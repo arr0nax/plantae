@@ -1,0 +1,22 @@
+<hr>
+
+<div class="form">
+  <label>Name: </label>
+  <input #name>
+  <label>Type: </label>
+  <select #type>
+    <option value="cactus">Cactus</option>
+    <option value="succulent">Succulent</option>
+    <option value="moss">Moss</option>
+    <option value="unknown">Other</option>
+  </select>
+  <label>Description: </label>
+  <input #description>
+  <label>Care Instructions: </label>
+  <input #care>
+  <label>Location: </label>
+  <input #location>
+  <label>Image URL: </label>
+  <input #img>
+  <button (click)='submitForm(name.value, type.value, description.value, care.value, location.value, img.value)'>New Plant!</button>
+</div>

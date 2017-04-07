@@ -19,4 +19,8 @@ export class PlantService {
     return this.af.database.object('plants/'+plantId);
   }
 
+  savePlant(newPlant) {
+    this.plants.push(newPlant);
+  }
+
 }

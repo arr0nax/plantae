@@ -11,6 +11,7 @@ import { PlantListComponent } from './plant-list/plant-list.component';
 import { PlantDetailComponent } from './plant-detail/plant-detail.component';
 import { AboutComponent } from './about/about.component';
 import { TypePipe } from './type.pipe';
+import { NewPlantComponent } from './new-plant/new-plant.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -25,7 +26,8 @@ export const firebaseConfig = {
     PlantListComponent,
     PlantDetailComponent,
     AboutComponent,
-    TypePipe
+    TypePipe,
+    NewPlantComponent,
   ],
   imports: [
     BrowserModule,
