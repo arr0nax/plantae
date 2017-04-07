@@ -1,25 +1,41 @@
-<p>
-  edit-plant works!
-</p>
+<h3>edit this plant</h3>
 
 <div class="form">
+  <div class="form-group">
+
   <label>Name: </label>
-  <input [(ngModel)]="plant.name">
+  <input [(ngModel)]="plant.name" value="{{(plant | async)?.name}}">
+</div>
+  <div class="form-group">
+
   <label>Type: </label>
-  <select [(ngModel)]="plant.type">
+  <select [(ngModel)]="plant.type" value="{{(plant | async)?.type}}">
     <option value="cactus">Cactus</option>
     <option value="succulent">Succulent</option>
     <option value="moss">Moss</option>
     <option value="unknown">Other</option>
   </select>
+</div>
+  <div class="form-group">
+
   <label>Description: </label>
-  <input [(ngModel)]="plant.description">
+  <textarea [(ngModel)]="plant.description" value="{{(plant | async)?.description}}"></textarea>
+</div>
+  <div class="form-group">
+
   <label>Care Instructions: </label>
-  <input [(ngModel)]="plant.care">
+  <textarea [(ngModel)]="plant.care" value="{{(plant | async)?.care}}"></textarea>
+  </div>
+    <div class="form-group">
+
   <label>Location: </label>
-  <input [(ngModel)]="plant.location">
+  <input [(ngModel)]="plant.location" value="{{(plant | async)?.location}}">
+</div>
+  <div class="form-group">
+
   <label>Image URL: </label>
-  <input [(ngModel)]="plant.img">
+  <input [(ngModel)]="plant.img" value="{{(plant | async)?.img}}">
+</div>
   <button (click)='editPlant(plant)'>edit</button>
 </div>
 <hr>

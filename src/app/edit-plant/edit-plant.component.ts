@@ -14,6 +14,7 @@ export class EditPlantComponent implements OnInit {
   constructor(private plantService: PlantService, private router: Router) { }
 
   ngOnInit() {
+    console.log(this.plant);
   }
 
   editPlant(plant) {

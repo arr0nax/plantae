@@ -1,3 +1,8 @@
 .nav {
   display: inline;
 }
+
+.nav-right {
+  float: right;
+  margin: 0px;
+}

@@ -1,9 +1,14 @@
 <hr>
 <div class="plant">
-  <h2>{{(plant | async)?.name}}</h2>
+  <h1>details about {{(plant | async)?.name}} the {{(plant | async)?.type}}</h1>
+  <h3><i>a little more about {{(plant | async)?.name}}</i></h3>
   <h2>{{(plant | async)?.description}}</h2>
+  <h3><i>how to care for {{(plant | async)?.name}}</i></h3>
   <h2>{{(plant | async)?.care}}</h2>
+  <h3><i>where is {{(plant | async)?.name}} in the house?</i></h3>
   <h2>{{(plant | async)?.location}}</h2>
+  <h3><i>a picture of {{(plant | async)?.name}}</i></h3>
+  <img src="{{(plant | async)?.img}}"/>
 </div>
 <hr>
 <app-edit-plant [plant]='plant'></app-edit-plant>
