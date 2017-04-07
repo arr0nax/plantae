@@ -21,7 +21,9 @@ export class PlantListComponent implements OnInit {
   }
 
   goToPlant(plant) {
-    this.router.navigate(['plant', plant.$key])
+    console.log('hello')
+    this.router.navigate(['plant', plant.$key]);
+
   }
 
   onTypeChange(type) {

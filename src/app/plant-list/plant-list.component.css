@@ -2,3 +2,9 @@ h4 {
   margin-top: -25px;
   margin-left: 15px;
 }
+ .plants {
+   display: inline-block;
+  padding-left: 40px;
+  cursor: pointer;
+  cursor: hand;
+ }

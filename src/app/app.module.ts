@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { TypePipe } from './type.pipe';
 import { NewPlantComponent } from './new-plant/new-plant.component';
 import { EditPlantComponent } from './edit-plant/edit-plant.component';
+import { SplashComponent } from './splash/splash.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -30,6 +31,7 @@ export const firebaseConfig = {
     TypePipe,
     NewPlantComponent,
     EditPlantComponent,
+    SplashComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,22 +1,40 @@
 <hr>
-
+<h1>create a new plant</h1>
 <div class="form">
-  <label>Name: </label>
+<div class="form-group">
+
+  <h3>name: </h3>
   <input #name>
-  <label>Type: </label>
+</div>
+<div class="form-group">
+
+  <h3>type: </h3>
   <select #type>
-    <option value="cactus">Cactus</option>
-    <option value="succulent">Succulent</option>
-    <option value="moss">Moss</option>
-    <option value="unknown">Other</option>
+    <option value="cactus">cactus</option>
+    <option value="succulent">succulent</option>
+    <option value="moss">moss</option>
+    <option value="unknown">other</option>
   </select>
-  <label>Description: </label>
-  <input #description>
-  <label>Care Instructions: </label>
-  <input #care>
-  <label>Location: </label>
+</div>
+<div class="form-group">
+
+  <h3>description: </h3>
+  <textarea #description></textarea>
+</div>
+<div class="form-group">
+
+  <h3>care instructions: </h3>
+  <textarea #care></textarea>
+</div>
+<div class="form-group">
+
+  <h3>location: </h3>
   <input #location>
-  <label>Image URL: </label>
+</div>
+<div class="form-group">
+
+  <h3>image URL: </h3>
   <input #img>
-  <button (click)='submitForm(name.value, type.value, description.value, care.value, location.value, img.value)'>New Plant!</button>
+</div>
+  <button (click)='submitForm(name.value, type.value, description.value, care.value, location.value, img.value)'>new plant!</button>
 </div>

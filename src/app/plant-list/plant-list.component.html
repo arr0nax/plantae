@@ -11,3 +11,4 @@
 <div class="plants" *ngFor="let plant of plants | async | type:filterByType" (click)='goToPlant(plant)'>
   <h2>{{plant.name}}</h2>
 </div>
+<app-splash></app-splash>

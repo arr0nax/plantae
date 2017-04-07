@@ -18,6 +18,7 @@ export class EditPlantComponent implements OnInit {
   }
 
   editPlant(plant) {
+    console.log(plant);
     this.plantService.editPlant(plant);
   }
 

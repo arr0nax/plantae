@@ -36,7 +36,7 @@
   <label>Image URL: </label>
   <input [(ngModel)]="plant.img" value="{{(plant | async)?.img}}">
 </div>
-  <button (click)='editPlant(plant)'>edit</button>
+  <button (click)='editPlant(plant)'>edit {{(plant | async)?.name}}</button>
 </div>
 <hr>
-  <button (click)=deletePlant(plant)>delete</button>
+  <button (click)=deletePlant(plant)>delete {{(plant | async)?.name}}</button>
