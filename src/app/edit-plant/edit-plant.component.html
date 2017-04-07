@@ -1,0 +1,26 @@
+<p>
+  edit-plant works!
+</p>
+
+<div class="form">
+  <label>Name: </label>
+  <input [(ngModel)]="plant.name">
+  <label>Type: </label>
+  <select [(ngModel)]="plant.type">
+    <option value="cactus">Cactus</option>
+    <option value="succulent">Succulent</option>
+    <option value="moss">Moss</option>
+    <option value="unknown">Other</option>
+  </select>
+  <label>Description: </label>
+  <input [(ngModel)]="plant.description">
+  <label>Care Instructions: </label>
+  <input [(ngModel)]="plant.care">
+  <label>Location: </label>
+  <input [(ngModel)]="plant.location">
+  <label>Image URL: </label>
+  <input [(ngModel)]="plant.img">
+  <button (click)='editPlant(plant)'>edit</button>
+</div>
+<hr>
+  <button (click)=deletePlant(plant)>delete</button>

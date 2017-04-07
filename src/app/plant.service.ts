@@ -23,4 +23,21 @@ export class PlantService {
     this.plants.push(newPlant);
   }
 
+  editPlant(plant) {
+    var plantEntry = this.getPlantById(plant.$key);
+    plantEntry.update({
+      name: plant.name,
+      type: plant.type,
+      description: plant.description,
+      care: plant.care,
+      location: plant.location,
+      img: plant.img
+    });
+  }
+
+  deletePlant(plant) {
+    var plantEntry = this.getPlantById(plant.$key);
+    plantEntry.remove();
+  }
+
 }
