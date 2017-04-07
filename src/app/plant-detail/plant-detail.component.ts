@@ -4,6 +4,8 @@ import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { PlantService } from '../plant.service';
 import { FirebaseObjectObservable } from 'angularfire2';
+import { Router } from '@angular/router'
+
 
 @Component({
   selector: 'app-plant-detail',
@@ -13,7 +15,7 @@ import { FirebaseObjectObservable } from 'angularfire2';
 })
 export class PlantDetailComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private location: Location, private plantService: PlantService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private plantService: PlantService, private router: Router) { }
   plantId: string;
   plant;
 
@@ -22,6 +24,17 @@ export class PlantDetailComponent implements OnInit {
      this.plantId = urlParameters['id'];
    });
    this.plant = this.plantService.getPlantById(this.plantId)
+ }
+
+ editPlant(name,type,description,care,location,img) {
+   this.plantService.editPlant(this.plantId,name,type,description,care,location,img);
+ }
+
+ deletePlant() {
+   if(confirm("This will permanently remove the plant. Do you want to continue?")) {
+     this.plantService.deletePlant(this.plantId);
+     this.router.navigate(['']);
+   }
  }
 
 }

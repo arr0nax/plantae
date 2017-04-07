@@ -5,6 +5,7 @@ import { PlantDetailComponent } from './plant-detail/plant-detail.component';
 import { AboutComponent } from './about/about.component';
 import { NewPlantComponent } from './new-plant/new-plant.component';
 import { PlantListComponent} from './plant-list/plant-list.component';
+import { EditPlantComponent } from './edit-plant/edit-plant.component';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +20,9 @@ const appRoutes: Routes = [
   }, {
     path: 'new-plant',
     component: NewPlantComponent
+  }, {
+    path: 'edit/:id',
+    component: EditPlantComponent
   }
 
 ];

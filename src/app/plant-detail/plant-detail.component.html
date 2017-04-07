@@ -11,4 +11,45 @@
   <img src="{{(plant | async)?.img}}"/>
 </div>
 <hr>
-<app-edit-plant [plant]='plant'></app-edit-plant>
+<h3>edit this plant</h3>
+
+<div class="form">
+  <div class="form-group">
+
+  <label>Name: </label>
+  <input #name value="{{(plant | async)?.name}}">
+</div>
+  <div class="form-group">
+
+  <label>Type: </label>
+  <select #type value="{{(plant | async)?.type}}">
+    <option value="cactus">Cactus</option>
+    <option value="succulent">Succulent</option>
+    <option value="moss">Moss</option>
+    <option value="unknown">Other</option>
+  </select>
+</div>
+  <div class="form-group">
+
+  <label>Description: </label>
+  <textarea #description value="{{(plant | async)?.description}}"></textarea>
+</div>
+  <div class="form-group">
+
+  <label>Care Instructions: </label>
+  <textarea #care value="{{(plant | async)?.care}}"></textarea>
+  </div>
+    <div class="form-group">
+
+  <label>Location: </label>
+  <input #location value="{{(plant | async)?.location}}">
+</div>
+  <div class="form-group">
+
+  <label>Image URL: </label>
+  <input #img value="{{(plant | async)?.img}}">
+</div>
+  <button (click)='editPlant(name.value, type.value, description.value, care.value, location.value, img.value)'>edit {{(plant | async)?.name}}</button>
+</div>
+<hr>
+  <button (click)=deletePlant(plant)>delete {{(plant | async)?.name}}</button>
