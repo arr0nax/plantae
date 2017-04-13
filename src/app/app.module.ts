@@ -12,7 +12,6 @@ import { PlantDetailComponent } from './plant-detail/plant-detail.component';
 import { AboutComponent } from './about/about.component';
 import { TypePipe } from './type.pipe';
 import { NewPlantComponent } from './new-plant/new-plant.component';
-import { EditPlantComponent } from './edit-plant/edit-plant.component';
 import { SplashComponent } from './splash/splash.component';
 
 export const firebaseConfig = {
@@ -29,8 +28,7 @@ export const firebaseConfig = {
     PlantDetailComponent,
     AboutComponent,
     TypePipe,
-    NewPlantComponent,
-    EditPlantComponent,
+    NewPlantComponent
     SplashComponent,
   ],
   imports: [
